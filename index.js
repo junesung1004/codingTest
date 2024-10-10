@@ -374,3 +374,246 @@ n	result
 //   return Math.ceil(n / 7);
 // };
 // console.log(solution(20));
+
+/*
+26번
+머쓱이네 옷가게는 10만 원 이상 사면 5%, 30만 원 이상 사면 10%, 50만 원 이상 사면 20%를 할인해줍니다.
+구매한 옷의 가격 price가 주어질 때, 지불해야 할 금액을 return 하도록 solution 함수를 완성해보세요.
+*/
+
+// const solution = (price) => {
+//   let totalPrice = price;
+//   if (price >= 500000) {
+//     totalPrice = Math.floor(price * 0.8); // 20% 할인
+//   } else if (price >= 300000) {
+//     totalPrice = Math.floor(price * 0.9); // 10% 할인
+//   } else if (price >= 100000) {
+//     totalPrice = Math.floor(price * 0.95); // 5% 할인
+//   }
+//   return totalPrice; // 최종 가격 반환
+// };
+
+/*
+27번
+정수 배열 numbers와 정수 num1, num2가 매개변수로 주어질 때, 
+numbers의 num1번 째 인덱스부터 num2번째 인덱스까지 자른 정수 배열을 return 하도록 solution 함수를 완성해보세요.
+*/
+
+// const solution = (numbers, num1, num2) => {
+//   let answer = numbers.splice(num1, num2);
+//   return answer;
+// };
+// let numbers = [1, 2, 3, 4, 5, 6, 7];
+// let num1 = 2;
+// let num2 = 4;
+// console.log(solution(numbers, num1, num2));
+
+/*
+28번
+문자열 str1, str2가 매개변수로 주어집니다. 
+str1 안에 str2가 있다면 1을 없다면 2를 return하도록 solution 함수를 완성해주세요.
+*/
+
+// const solution = (str1, str2) => {
+//   return str1.includes(str2) ? 1 : 2;
+// };
+// let str1 = "hello world";
+// let str2 = "world";
+// console.log(soltuion(str1, str2));
+
+/*
+29번
+머쓱이는 추운 날에도 아이스 아메리카노만 마십니다. 
+아이스 아메리카노는 한잔에 5,500원입니다. 
+머쓱이가 가지고 있는 돈 money가 매개변수로 주어질 때, 
+머쓱이가 최대로 마실 수 있는 아메리카노의 잔 수와 남는 돈을 순서대로 담은 배열을 return 하도록 solution 함수를 완성해보세요.
+*/
+
+// const solution = (money) => {
+//   let 아메리카노 = 5500;
+//   let 몇잔 = Math.floor(money / 아메리카노);
+//   let 잔돈 = money - 아메리카노 * 몇잔;
+//   let 정답 = [몇잔, 잔돈];
+//   return 정답;
+// };
+
+/*
+30번
+문자열 my_string이 매개변수로 주어집니다. 
+my_string안의 모든 자연수들의 합을 return하도록 solution 함수를 완성해주세요.
+*/
+
+// const solution = (my_string) => {
+//   return my_string
+//     .split("")
+//     .filter((el) => !isNaN(el))
+//     .reduce((prev, cur) => prev + Number(cur), 0);
+// };
+// let my_string = "12jasdkj21hk3hajhskhd2318797asjdhk2j1";
+// console.log(solution(my_string));
+
+/*
+31번
+문자열 my_string이 매개변수로 주어질 때, 
+대문자는 소문자로 소문자는 대문자로 변환한 문자열을 return하도록 solution 함수를 완성해주세요.
+*/
+
+// const solution = (my_string) => {
+//   let answer = [];
+//   let res = my_string.split("");
+//   res.map((str) => {
+//     if (isNaN(str)) {
+//       if (str === str.toUpperCase()) {
+//         let uppStr = str.toLowerCase();
+//         answer.push(uppStr);
+//       } else if (str === str.toLowerCase()) {
+//         let lowerStr = str.toUpperCase();
+//         answer.push(lowerStr);
+//       }
+//     }
+//   });
+//   let arrstr = answer.join("");
+//   return arrstr;
+// };
+// const solution = (my_string) => {
+//   const res = my_string.split("");
+//   let data = [];
+//   res.map((el) => {
+//     if (el === el.toUpperCase()) {
+//       el = el.toLowerCase();
+//       data.push(el);
+//     } else {
+//       el = el.toUpperCase();
+//       data.push(el);
+//     }
+//   });
+//   let answer = data.join("");
+//   return answer;
+// };
+// const my_string = "MynameisApple";
+// console.log(solution(my_string));
+
+/*
+32번
+정수 배열 array가 매개변수로 주어질 때, 
+가장 큰 수와 그 수의 인덱스를 담은 배열을 return 하도록 solution 함수를 완성해보세요.
+*/
+
+// const solution = (array) => {
+//   let maxNum = Math.max(...array);
+//   let maxIndex = array.indexOf(maxNum);
+//   let answer = [maxNum, maxIndex];
+//   return answer;
+// };
+// const array = [2, 6, 2, 4, 6, 7, 8, 9];
+// console.log(solution(array));
+
+/*
+33번
+정수 n과 정수 배열 numlist가 매개변수로 주어질 때, 
+numlist에서 n의 배수가 아닌 수들을 제거한 배열을 return하도록 solution 함수를 완성해주세요.
+*/
+
+// const solution = (n, numlist) => {
+//   numlist.filter((e) => e % n === 0);
+//   return numlist;
+// };
+// const numlist = [1, 2, 4, 5, 6, 7, 2, 3, 11, 1, 232, 34];
+// const n = 3;
+// console.log(solution(n, numlist));
+
+/*
+34번
+가위는 2 바위는 0 보는 5로 표현합니다. 
+가위 바위 보를 내는 순서대로 나타낸 문자열 rsp가 매개변수로 주어질 때, 
+rsp에 저장된 가위 바위 보를 모두 이기는 경우를 순서대로 나타낸 문자열을 return하도록 solution 함수를 완성해보세요.
+*/
+
+// const solution = (rsp) => {
+//   let answer = [];
+//   let res = rsp.split("");
+//   res.forEach((el) => {
+//     if (el === "2") {
+//       answer.push(0);
+//     } else if (el === "0") {
+//       answer.push(5);
+//     } else {
+//       answer.push(2);
+//     }
+//   });
+//   return answer.join("");
+// };
+// const rsp = "250";
+// console.log(solution(rsp));
+
+/*
+35번
+문자열 my_string과 정수 n이 매개변수로 주어질 때, 
+my_string에 들어있는 각 문자를 n만큼 반복한 문자열을 return 하도록 solution 함수를 완성해보세요.
+*/
+
+// const solution = (my_string, n) => {
+//   let answer = "";
+//   my_string.split("").forEach((el) => {
+//     answer += el.repeat(n);
+//   });
+//   return answer;
+// };
+// const my_string = "hello world";
+// const n = 2;
+// console.log(solution(my_string, n));
+
+/*
+36번
+정수가 들어 있는 배열 num_list가 매개변수로 주어집니다. 
+num_list의 원소의 순서를 거꾸로 뒤집은 배열을 return하도록 solution 함수를 완성해주세요.
+*/
+
+// const solution = (num_list) => {
+//   return num_list.reverse();
+// };
+// let num_list = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// console.log(solution(num_list));
+
+/*
+37번
+"*"의 높이와 너비를 1이라고 했을 때, 
+"*"을 이용해 직각 이등변 삼각형을 그리려고합니다. 
+정수 n 이 주어지면 높이와 너비가 n 인 직각 이등변 삼각형을 출력하도록 코드를 작성해보세요.
+
+pass...
+*/
+
+/*
+38번
+머쓱이네 피자가게는 피자를 두 조각에서 열 조각까지 원하는 조각 수로 잘라줍니다. 
+피자 조각 수 slice와 피자를 먹는 사람의 수 n이 매개변수로 주어질 때, 
+n명의 사람이 최소 한 조각 이상 피자를 먹으려면 최소 몇 판의 피자를 시켜야 하는지를 return 하도록 solution 함수를 완성해보세요.
+*/
+
+// const solution = (slice, n) => {
+//   return Math.ceil(n / slice);
+// };
+// const slice = 2;
+// const n = 4;
+// console.log(solution(slice, n));
+
+/*
+39번
+머쓱이는 직육면체 모양의 상자를 하나 가지고 있는데 
+이 상자에 정육면체 모양의 주사위를 최대한 많이 채우고 싶습니다. 
+상자의 가로, 세로, 높이가 저장되어있는 배열 box와 주사위 모서리의 길이 정수 n이 매개변수로 주어졌을 때, 
+상자에 들어갈 수 있는 주사위의 최대 개수를 return 하도록 solution 함수를 완성해주세요.
+
+제한사항
+box의 길이는 3입니다.
+box[0] = 상자의 가로 길이
+box[1] = 상자의 세로 길이
+box[2] = 상자의 높이 길이
+1 ≤ box의 원소 ≤ 100
+1 ≤ n ≤ 50
+n ≤ box의 원소
+주사위는 상자와 평행하게 넣습니다.
+*/
+
+const solution = (box, n) => {};
