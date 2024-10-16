@@ -616,4 +616,116 @@ n ≤ box의 원소
 주사위는 상자와 평행하게 넣습니다.
 */
 
-const solution = (box, n) => {};
+//const solution = (box, n) => {};
+
+/*
+40번
+정수 n이 매개변수로 주어질 때, 
+n의 약수를 오름차순으로 담은 배열을 return하도록 solution 함수를 완성해주세요.
+*/
+
+// function solution(n) {
+//   var answer = [];
+//   for (let i = 1; i <= n; i++) {
+//     if (n % i == 0) {
+//       answer.push(i);
+//     }
+//   }
+//   return answer[0];
+// }
+// let n = 24;
+// console.log(solution(n));
+
+/*
+41번
+개미 군단이 사냥을 나가려고 합니다. 
+개미군단은 사냥감의 체력에 딱 맞는 병력을 데리고 나가려고 합니다. 
+장군개미는 5의 공격력을, 
+병정개미는 3의 공격력을 
+일개미는 1의 공격력을 가지고 있습니다. 
+예를 들어 체력 23의 여치를 사냥하려고 할 때, 
+일개미 23마리를 데리고 가도 되지만, 
+장군개미 네 마리와 병정개미 한 마리를 데리고 간다면 
+더 적은 병력으로 사냥할 수 있습니다. 
+사냥감의 체력 hp가 매개변수로 주어질 때, 
+사냥감의 체력에 딱 맞게 최소한의 병력을 구성하려면 
+몇 마리의 개미가 필요한지를 return하도록 solution 함수를 완성해주세요.
+*/
+
+// const solution = (hp) => {
+//   let 일개미 = 1;
+//   let 병정개미 = 3;
+//   let 장군개미 = 5;
+//   let count = Math.floor(hp / 장군개미);
+//   hp = hp % 장군개미;
+//   count = count + Math.floor(hp / 병정개미);
+//   hp = hp % 병정개미;
+//   count = count + Math.floor(hp / 일개미);
+//   hp = hp % 일개미;
+//   return count;
+// };
+// let hp = 14;
+// console.log(solution(hp));
+
+// const solution = (hp) => {
+//   let 장군개미 = Math.floor(hp / 5);
+//   let 병정개미 = Math.floor((hp - 장군개미 * 5) / 3);
+//   let 일개미 = hp - (장군개미 * 5 + 병정개미 * 3);
+//   return 장군개미 + 병정개미 + 일개미;
+// };
+// let hp = 24;
+// console.log(solution(14));
+
+/*
+42번
+정수 배열 numbers가 매개변수로 주어집니다. 
+numbers의 원소 중 두 개를 곱해 만들 수 있는 최댓값을 return하도록 
+solution 함수를 완성해주세요.
+*/
+
+// const solution = (numbers) => {
+//   let res = numbers.sort((a, b) => b - a);
+//   let maxNum = Math.max(...res);
+//   let twoMaxNum = res[1];
+//   return maxNum * twoMaxNum;
+// };
+// let numbers = [4, 2, 5, 7, 20, 12, 13, 52];
+// console.log(solution(numbers));
+
+/*
+43번
+두 배열이 얼마나 유사한지 확인해보려고 합니다. 
+문자열 배열 s1과 s2가 주어질 때 같은 원소의 개수를 return하도록 
+solution 함수를 완성해주세요.
+*/
+
+// const solution = (s1, s2) => {
+//   let count = 0;
+//   let set1 = new Set(s1)
+//   for(let i of s2) {
+//       if(set1.has(i)){
+//           count++
+//       }
+//   }
+//   return count
+// }
+
+// const s1 = ["a", "b", "c", "a"];
+// const s2 = ["com", "bo", "b", "c"];
+// const soltuion = (s1, s2) => {
+//   let data = s1.filter((v) => s2.includes(v));
+//   let answer = data.length;
+//   return answer;
+// };
+// console.log(soltuion(s1, s2));
+
+/*
+44번
+순서쌍이란 두 개의 숫자를 순서를 정하여 짝지어 나타낸 쌍으로 (a, b)로 표기합니다. 
+자연수 n이 매개변수로 주어질 때 두 숫자의 곱이 n인 자연수 순서쌍의 개수를 
+return하도록 solution 함수를 완성해주세요.
+예시) n = 4일때
+(1,4),(2,2),(4,1)
+*/
+
+//const solution = (n) => {};
